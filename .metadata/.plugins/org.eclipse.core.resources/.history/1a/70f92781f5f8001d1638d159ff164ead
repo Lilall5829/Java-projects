@@ -1,0 +1,37 @@
+/*A1SimonBLiL.Java 
+ *This is a program for finding out future value earned by the user.
+ * 
+ *Revision History: 
+ *		Li La and Bush Simon,2023.05.16: Created 
+ *
+ *
+ */
+import java.util.Scanner;
+public class A1SimonBLiL {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String userName;
+		double investmentAmount = 0, annualInterestRate, monthlyInterestRate, futureValue;
+		int years;
+		System.out.println("Ener the Your Name:");
+		userName = input.next();
+		System.out.println("Enter investment amount: $");
+		investmentAmount = input.nextDouble();
+		System.out.println("Enter annual interest rate (Only 2 Decimal place):");
+		annualInterestRate = input.nextDouble();
+		monthlyInterestRate = annualInterestRate/1200;
+		System.out.println("Enter number of years:");
+		years = input.nextInt();
+		futureValue = investmentAmount * Math.pow(1 + monthlyInterestRate, years * 12);
+		System.out.println("-------------------------------------");
+		System.out.println("|    User Name: " + userName + "                |");
+		System.out.println("|    Investment Amount: $" + investmentAmount + "    |");
+        //System.out.printf("|    Investment Amount: $%.2f    |%n", investmentAmount);
+        System.out.println("|    Annual Interest Rate: " + annualInterestRate + "%" + "    |");
+        System.out.println("|    Future Value: $" + futureValue + "         |");
+        //System.out.printf("|    Future Value: $%.2f         |%n", futureValue);
+        System.out.println("-------------------------------------");
+			}
+
+}

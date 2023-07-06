@@ -1,0 +1,17 @@
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x = 9;
+		int y = 2;
+		int answer;
+		answer = x % y;
+		System.out.println( x + "%" +y + "=" + answer);
+		double doubleValue = 2.0;
+		//注意answer的类型
+		double doubleAnswer = x / doubleValue;
+		System.out.println(x + " / " + doubleValue + "=" + doubleAnswer);
+	}
+
+}

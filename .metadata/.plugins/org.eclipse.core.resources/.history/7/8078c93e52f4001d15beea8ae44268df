@@ -1,0 +1,110 @@
+import java.util.Scanner;
+
+public class DecisionsExamples {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		// 把变量置顶
+		int age, number1, number2;
+		double hours, overtime;
+		boolean socksOn, hatOn;
+		String suit, day, category;
+		// 1. determine if a person is old enough to vote,
+		age = 11;
+		if (age >= 18) {
+			System.out.println("You can vote");
+		} else {
+			System.out.println("No vote");
+		}
+
+		// 2.Create a program that determines the max value
+		number1 = 15;
+		number2 = 17;
+		if (number1 > number2) {
+			System.out.println(number1 + ">" + number2);
+		} else {
+			System.out.println(number1 + "<" + number2);
+		}
+		// 5. Determine overtime hours from user inout
+		System.out.println("Enter hours: ");
+		hours = input.nextDouble();
+		if (hours <= 40) {
+			System.out.println(" hours worked " + hours);
+		} else {
+			overtime = hours - 40;
+			System.out.println(" overtime worked " + overtime);
+		}
+		// 6. determine the color of a card suit
+		System.out.println("Enter suit:");
+		// 有时候JAVA会不显示用户下一行输入的东西，将nextLine改成next
+		suit = input.next();
+		if (suit.equalsIgnoreCase("clubs")) {
+			System.out.println("card is black");
+		} else {
+			System.out.println("debug");
+		}
+		// 7. Do the same as above but use an OR || statement
+		// 8. Use AND statements to see if two conditions are true
+		socksOn = true;
+		hatOn = false;
+		if(socksOn == true && hatOn == true) {
+			System.out.println("You are warm");
+		} else if(socksOn&& !hatOn){
+			System.out.println("Head is cold");
+		}else if (socksOn == false && hatOn == true) {
+			System.out.println("Feet is cold");
+		}else {
+			System.out.println("You are cold");
+		}
+		
+		//9. Determine hurricane wind speeds
+		System.out.println("Enter category: ");
+		category = input.next();
+		//int cat = input.nextInt();
+		switch(category) {
+		//数据类型没有“”，字符串有
+		case" 1":
+			System.out.println("1-153 km/hr");
+			break;
+		case" 2":
+			System.out.println("154-177 km/hr");
+			break;
+		case "3":
+			System.out.println("178-209 km/hr");
+			break;
+		case "4":
+			System.out.println("210-249 km/hr");
+			break;
+		case "5":
+			System.out.println(">249 km/hr");
+			break;
+		default:
+			System.out.println("Only 1-5 are categories");
+		}
+		//10. Determine if it's a weekday
+		day = "tuesday";
+		switch(day) {
+		case"Monday":
+			System.out.println("It's a weekday");
+			break;
+		case"Tuesday":
+			System.out.println("It's a weekday");
+			break;
+		case"Wednesday":
+			System.out.println("It's a weekday");
+			break;
+		case"Thusday":
+			System.out.println("It's a weekday");
+			break;
+		case"Friday":
+			System.out.println("It's a weekday");
+			break;
+		case"Saturday":
+			System.out.println("It's the weekend");
+			break;
+		case"Sunday":
+			System.out.println("It's the weekend");
+			break;
+		}
+	}
+}

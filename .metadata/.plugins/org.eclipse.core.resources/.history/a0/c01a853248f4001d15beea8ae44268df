@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class DecisionsExamples {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		//把变量置顶
+		int age, number1, number2;
+		double hours,overtime;
+		boolean socksOn, hatOn;
+		String suit, day, category;
+		//1. determine if a person is old enough to vote,
+		age = 11;
+		if(age >= 18) {
+			System.out.println("You can vote");
+		} else {
+			System.out.println("No vote");
+		}
+		
+		//2.Create a program that determines the max value
+		number1 = 12;
+		number2 = 15;
+		if(number1 < number2) {
+			System.out.println(number1 + " > " + number2);
+		} else {
+			System.out.println(number1 + " < " + number2);
+		}
+	}

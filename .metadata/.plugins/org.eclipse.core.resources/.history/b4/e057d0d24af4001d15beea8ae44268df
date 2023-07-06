@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class DecisionsExamples {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		//把变量置顶
+		int age, number1, number2;
+		double hours,overtime;
+		boolean socksOn, hatOn;
+		String suit, day, category;
+		//1. determine if a person is old enough to vote,
+		age = 11;
+		if(age >= 18) 
+		{
+			System.out.println("You can vote");
+		} else {
+			System.out.println("No vote");
+		}
+		
+		//2.Create a program that determines the max value
+		number1 = 15;
+		number2 = 17;
+		if(number1 > number2) {
+			System.out.println(number1 + ">" + number2);
+		} else {
+			System.out.println(number1 + "<" + number2);
+		}
+		//5. Determine overtime hours from user inout
+		System.out.println("Enter hours: ");
+		hours = input.nextDouble();
+		if(hours <= 40) {
+			System.out.println(" hours worked " + hours);
+		} else {
+			overtime = hours - 40;
+			System.out.println(" overtime worked " + overtime);
+		}
+		//6. determine the color of a card suit
+		System.out.println("Enter suit:");
+		//有时候JAVA会不显示用户下一行输入的东西，将nextLine改成next
+		suit = input.next();
+		if(suit.equals("clubs")) {
+			System.out.println("card is black");
+		} else {
+			System.out.println("debug");
+		}
+	}
+}

@@ -1,0 +1,19 @@
+
+public class LoanTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Loan loan1 = new Loan(5,6,20000);
+		
+		System.out.println("Date: " + loan1.getLoanDate());
+		System.out.printf("Monthly: $%.2f", loan1.getMonthlyPayment());
+		System.out.printf("\nTotal: $%.2f", loan1.getTotalPayment());
+		
+		// Create a default(no-arg) loan object
+		Loan loan2 = new Loan();
+		System.out.println("Date: " + loan2.getLoanDate());
+		System.out.printf("Monthly: $%.2f", loan2.getMonthlyPayment());
+		System.out.printf("\nTotal: $%.2f", loan2.getTotalPayment());
+	}
+
+}

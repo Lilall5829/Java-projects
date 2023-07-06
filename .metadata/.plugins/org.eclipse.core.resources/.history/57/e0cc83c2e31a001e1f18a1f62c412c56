@@ -1,0 +1,40 @@
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class project1 {
+
+	public static void main(String[] args) {
+		String[][] boyNames = new String[10][1000];
+		String[][] girlNames = new String[10][1000];
+
+		loadNames(boyNames, girlNames);
+
+	}
+
+	public static void loadNames(String[][] boyNames, String[][] girlNames) {
+		int year;
+
+		for (year = 2001; year <= 2010; year++) {
+			File file = new File("babynamesranking" + year + ".txt");
+
+			try (Scanner fileScanner = new Scanner(file)) {
+				int rank;
+				while (fileScanner.hasNextLine()) {
+					String[] line = fileScanner.nextLine().split("\\s+");
+					rank = Integer.parseInt(line[0]);
+					boyNames[year - 2001][rank - 1] = line[1];
+					girlNames[year - 2001][rank - 1] = line[3];
+				}
+			} catch (IOException e) {
+				System.out.println(e.getMessage());
+			}
+			for (int i = 0; i < boyNames.length; i++) {
+				// Iterate over each column within the current row
+				for (int j = 0; j < boyNames[i].length; j++) {
+					System.out.print(boyNames[i][j] + " ");
+				}
+			}
+		}
+	}
+}

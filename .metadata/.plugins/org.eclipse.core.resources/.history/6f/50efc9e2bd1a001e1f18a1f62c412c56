@@ -1,0 +1,32 @@
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class project1 {
+
+	public static void main(String[] args) {
+		loadNames();
+
+	}
+
+	public static void loadNames() {
+		int i;
+		for (i = 0; i < 10; i++) {
+			File file = new File("babynamesranking" + 2001 + ".txt");
+
+			try (Scanner fileScanner = new Scanner(file)) {
+				while (fileScanner.hasNextLine()) {
+					String[] line = fileScanner.nextLine().split("\\s+");
+
+					for (String s : line) {
+						System.out.print(s + " ");
+					}
+
+					System.out.println();
+				}
+			} catch (IOException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+}
