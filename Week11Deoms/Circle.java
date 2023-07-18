@@ -6,6 +6,7 @@ public class Circle extends GeometricObject {
 
 	public Circle(double radius) {
 		//TODO - include call to super constructor
+		super("Red", true);
 		this.radius = radius;
 	}
 
@@ -27,6 +28,14 @@ public class Circle extends GeometricObject {
 	}
 	
 	//TODO - Override getArea()
-	
-	//TODO - Override getPerimeter()
+	@Override
+	public double getArea() {
+		return Math.PI * radius * radius;
+	}
+	@Override
+	public double getPerimeter() {
+		
+		return 0;
+	}
+
 }
