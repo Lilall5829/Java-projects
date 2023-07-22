@@ -1,14 +1,7 @@
 /* A3LiL.java
  * 
  * This program is to solve the following problem:
-   Assume there are 100 lockers numbered 1 to 100 with 100 students lined up in front of those 100 lockers:
-	•	The first student opens every locker.
-	•	The second student closes every 2nd locker.
-	•	The 3rd student changes every 3rd locker; if it’s closed, the student opens it; if it’s open, the student closes it.
-	•	The 4th student changes every fourth locker.
-	•	The 5th student changes every 5th locker.
-	•	That same pattern continues for all 100 students.
-	The problem is what’s the status(open/close) of each locker (from number 1 to 100).
+   Create an Account object with account ID, balance, and annual interest rate. Use the withdraw and deposit method to withdraw and deposit a specified amount to the account. Print the balance, the monthly interest rate, the monthly interest amount, and the date when this account was created.
  * 
  * Revision History:
  *     La Li 2023.07.18: Created
@@ -16,26 +9,38 @@
 import java.util.Date;
 public class A3LiL {
 	/*
-	 * @param i Integer  The parameter for counting the number of students.
-	 * @param j Integer  The parameter for counting the number of students.
-	 * @param result String  The parameter for storing the state of current locker: open or close.
-	 * @param lockers Boolean Array  The parameter for storing the state of each locker.  
+	 * @param balance double  The parameter for storing the balance.
+	 * @param annualInterestRate double  The parameter for storing the annual interest rate.
+	 * @param monthlyInterestRate double  The parameter for storing the monthly interest rate.
+	 * @param monthlyInterest double  The parameter for storing the monthly interest.  
+	 * @param date Date  The parameter for storing the current date.
      */
 	public static void main(String[] args) {
 		double balance, annualInterestRate,monthlyInterestRate,monthlyInterest;
 		Date date;
-		Account account = new Account(1122, 20000);
-		account.setAnnualInterestRate(4.5);
+		
+		// Create an Account object with an account ID of 1122, a balance of $20,000
+		Account account = new Account(123456789, 5000);
+		// Set annual interest rate to 4.5%
+		account.setAnnualInterestRate(0.7);
 		annualInterestRate = account.getAnnualInterestRate();
+		// Calculate the monthly interest rate
 		monthlyInterestRate = account.getMonthlyInterestRate(annualInterestRate);
-		account.withdraw(2500);
-		account.deposit(3000);
+		// Withdraw $2500 from the account
+		account.withdraw(3000);
+		// Deposit $3000 from the account
+		account.deposit(1000);
+		// Calculate the balance after withdrawing and depositing
 		balance = account.getBalance();
+		// Calculate the monthly interest
 		monthlyInterest = account.getMonthlyInterest(balance, monthlyInterestRate);
+		// Get the current date
 		date = account.getDateCreated();
+		
+		// Print output
 		System.out.println("Account Balance: $" + balance);
-		System.out.println("Monthly Rate: " + monthlyInterestRate + "%");
-		System.out.println("Monthly Interest: $" + monthlyInterest);
+		System.out.printf("Monthly Rate: %.2f%%%n", monthlyInterestRate);
+		System.out.printf("Monthly Interest: $%.2f%n",monthlyInterest);
 		System.out.println(date.toString());
 	}
 
