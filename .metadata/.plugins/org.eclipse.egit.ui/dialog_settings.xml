@@ -23,6 +23,16 @@
 		<item key="sortItemState" value="true"/>
 	</section>
 	<section name="GitCommitMessageComponent">
+		<list key="C:\Java workplace\.git">
+			<item value="false"/>
+			<item value="Lilall5829 &lt;lilall5829@gmail.com&gt;"/>
+			<item value="assign3 final"/>
+			<item value="Lilall5829 &lt;lilall5829@gmail.com&gt;"/>
+			<item value="d66ef856eb18b895503d693b3b7148491fce1cd8"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.dialogs.ResetTargetSelectionDialog.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="147"/>
