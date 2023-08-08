@@ -22,12 +22,29 @@ public class DBExamples {
 		//4.
 		//
 		// Update a player
-		db.executeSQL(connection,"UPDATE players SET goals = '122' WHERE name = 'li'");
+		//db.executeSQL(connection,"UPDATE players SET goals = '122' WHERE name = 'li'");
 		
 		//1b.
 		//
 		//Display all the values in as
-		ResultSet rs = db.executeSelect(connection, "SELECT * FROM players");
+
+		
+		//5
+		//
+		//Create a table, add 2 records, and display it.
+		db.executeSQL(connection, "CREATE TABLE game (id char(9) not null,\r\n"
+				+ "  lastName varchar(15),\r\n"
+				+ "  firstName varchar(15),\r\n"
+				+ "  mi char(1),\r\n"
+				+ "  age int,\r\n"
+				+ "  address varchar(20),\r\n"
+				+ "  city varchar(20),\r\n"
+				+ "  state char(2),\r\n"
+				+ "  telephone char(10),\r\n"
+				+ "  email varchar(40),\r\n"
+				+ "  primary key (id)\r\n"
+				+ ")");
+		ResultSet rs = db.executeSelect(connection, "SELECT * FROM game");
 		while(rs.next()) {
 			System.out.println(rs.getString(1) + " " + rs.getString(2) + " " + rs.getString(3) + " " + rs.getString(4));
 		}

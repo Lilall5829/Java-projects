@@ -24,7 +24,14 @@
 	</section>
 	<section name="GitCommitMessageComponent">
 		<list key="C:\Java workplace\.git">
-			<item value="empty"/>
+			<item value="false"/>
+			<item value="Lilall5829 &lt;lilall5829@gmail.com&gt;"/>
+			<item value="week13"/>
+			<item value="Lilall5829 &lt;lilall5829@gmail.com&gt;"/>
+			<item value="f646efdd1d91816beb8f59a4a905334e8bb1bda4"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.dialogs.ResetTargetSelectionDialog.dialogBounds">
@@ -44,5 +51,12 @@
 			<item value="600"/>
 			<item value="400"/>
 		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="461"/>
+		<item key="DIALOG_Y_ORIGIN" value="224"/>
+		<item key="DIALOG_WIDTH" value="626"/>
+		<item key="DIALOG_HEIGHT" value="394"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-24|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
